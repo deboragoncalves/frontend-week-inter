@@ -35,8 +35,11 @@ const Login = () => {
     )
 }
 
-// Link: navega para o componente sem recarregar a página
-// TODO: Melhorar layout input
-// TODO: validações input onClick
+/* Navigate: método que recebe como parâmetro a rota (string)
+Link/Navigate: navega para o componente sem recarregar a página. Link tem como atributo to, que recebe
+como parâmetro a rota (string)
+TODO: Melhorar layout input
+TODO: validações input onClick
+*/
 
 export default Login;

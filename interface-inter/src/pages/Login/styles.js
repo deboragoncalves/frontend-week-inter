@@ -16,7 +16,7 @@ export const Background = styled.div`
     position: absolute;
     width: 100%;
     top: 0; 
-    left: 0; 
+    left: 0;
     height: 50%;
     background-image: url(${(props) => props.image});
     background-size: cover;

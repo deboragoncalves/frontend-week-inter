@@ -8,7 +8,9 @@ const theme = {
         secondary: colors.SECONDARY,
         tertiary: colors.TERTIARY,
         background: colors.BACKGROUND,
-        backgroundLight: colors.BACKGROUNDLIGHT
+        backgroundLight: colors.BACKGROUNDLIGHT,
+        red: colors.RED,
+        green: colors.GREEN
     }
 }
 

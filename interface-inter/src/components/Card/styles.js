@@ -33,4 +33,8 @@ export const CardContainer = styled.div`
             font-weight: 700;
         }
     }
+
+    h3 {
+        color: ${theme.colors.primary};
+    }
 `;
