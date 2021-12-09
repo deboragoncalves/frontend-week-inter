@@ -1,7 +1,14 @@
+import { Background, LoginContainer } from "./styles";
+import backgroundInter from '../../images/background.jpg';
+import { Card } from "../../components/Card/Card";
+
 const Login = () => {
     return (
         <>
-            <h1>Login</h1>
+            <LoginContainer>
+                <Background image={backgroundInter}></Background>
+                <Card width="403px"></Card>
+            </LoginContainer>
         </>
     )
 }
