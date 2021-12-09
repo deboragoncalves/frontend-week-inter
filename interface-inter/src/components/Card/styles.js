@@ -24,5 +24,13 @@ export const CardContainer = styled.div`
 
     p {
         text-align: center;
+        font-size 0.75rem;
+        font-weight: 400;
+        color: ${theme.colors.secondary};
+
+        a { 
+            color: ${theme.colors.primary};
+            font-weight: 700;
+        }
     }
 `;

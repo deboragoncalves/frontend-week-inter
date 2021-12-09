@@ -4,9 +4,15 @@ import logoInter from '../../images/logo.png';
 import { Card } from "../../components/Card/Card";
 import { InputContainer } from "../../components/Input/styles";
 import { ButtonContainer } from "../../components/Button/styles";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
+    const navigate = useNavigate();
+
+    const navigateToDashboard = () => {
+        navigate("/dashboard");
+    }
+
     return (
         <>
             <LoginContainer>
@@ -20,7 +26,7 @@ const Login = () => {
                         <input placeholder="Senha" type="password"></input>
                     </InputContainer>
                     <ButtonContainer>
-                        <button type="button">Entrar</button>
+                        <button type="button" onClick={navigateToDashboard}>Entrar</button>
                     </ButtonContainer>
                     <p>Ainda não é cadastrado? <Link to="/register"> Cadastre-se já!</Link></p>
                 </Card>
@@ -30,6 +36,7 @@ const Login = () => {
 }
 
 // Link: navega para o componente sem recarregar a página
-// TODO: Melhorar input
+// TODO: Melhorar layout input
+// TODO: validações input onClick
 
 export default Login;
