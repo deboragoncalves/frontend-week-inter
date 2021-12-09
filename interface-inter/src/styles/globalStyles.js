@@ -20,6 +20,11 @@ const GlobalStyles = createGlobalStyle`
         border: none;
         color: white;
     }
+
+    a {
+        text-decoration: none;
+        cursor: pointer;
+    }
 `;
 
 export default GlobalStyles;

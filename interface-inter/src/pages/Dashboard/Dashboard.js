@@ -1,7 +1,13 @@
+import { Header } from "../../components/Header/Header";
+import { BodyContainer, DashboardBackground, InlineTitle, InlineContainer } from './styles';
+
 const Dashboard = () => {
     return (
         <>
-            <h1>Dashboard</h1>
+            <DashboardBackground>
+                <Header></Header>
+                <BodyContainer></BodyContainer>
+            </DashboardBackground>
         </>
     )
 }
