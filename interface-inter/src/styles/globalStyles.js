@@ -13,6 +13,12 @@ const GlobalStyles = createGlobalStyle`
     body {
         background-color: ${theme.colors.background};
     }
+
+    button {
+        background: none;
+        border: none;
+        color: white;
+    }
 `;
 
 export default GlobalStyles;

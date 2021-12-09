@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import theme from "../../styles/theme";
 
+// Props - propriedades que o componente recebe
+
 export const CardContainer = styled.div`
     width: ${(props) => props.width};
     height: ${(props) => props.height};
@@ -12,4 +14,15 @@ export const CardContainer = styled.div`
     flex-direction: column; 
     z-index: 5000; 
     background: ${theme.colors.background};
+
+    img {
+        width: 172px;
+        height: 61px;
+
+        margin-bottom: 50px;
+    }
+
+    p {
+        text-align: center;
+    }
 `;
