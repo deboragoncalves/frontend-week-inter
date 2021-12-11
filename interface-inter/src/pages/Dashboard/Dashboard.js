@@ -2,6 +2,7 @@ import { ButtonContainer } from "../../components/Button/styles";
 import { Card } from "../../components/Card/Card";
 import { Header } from "../../components/Header/Header";
 import { InputContainer } from "../../components/Input/styles";
+import colors from "../../styles/colors";
 import { 
     BodyContainer, 
     DashboardBackground, 
@@ -12,6 +13,7 @@ import {
     StatementItemImage, 
     StatementItemInfo 
 } from './styles';
+import { format } from 'date-fns'
 
 const Dashboard = () => {
 
@@ -32,7 +34,7 @@ const Dashboard = () => {
         {
             user: {
                 firstName: "Ana",
-                lastName: "Gonçalves"
+                lastName: "Oliveira"
             },
             value: 300,
             typePayment: "receive",
@@ -40,15 +42,13 @@ const Dashboard = () => {
         }
     ];
 
-    console.log(statements);
-
     return (
         <>
             <DashboardBackground>
                 <Header></Header>
                 <BodyContainer>
                     <div>
-                        <Card width="90%">
+                        <Card width="80%" height="80px">
                             <InlineTitle>
                                 <h2>Saldo atual</h2>
                             </InlineTitle>
@@ -58,7 +58,7 @@ const Dashboard = () => {
                                 </h3>
                             </InlineContainer>
                         </Card>
-                        <Card width="90%">
+                        <Card width="80%" height="80px">
                             <InlineTitle>
                                 <h2>Receber PIX</h2>
                             </InlineTitle>
@@ -70,11 +70,8 @@ const Dashboard = () => {
                                     <button>Gerar Código</button>
                                 </ButtonContainer>
                             </InlineContainer>
-
-                            <p>Pix Copia e Cola</p>
-                            <p>5943dfjrg</p>
                         </Card>
-                        <Card width="90%">
+                        <Card width="80%" height="80px">
                             <InlineTitle>
                                 <h2>Pagar PIX</h2>
                             </InlineTitle>
@@ -89,7 +86,7 @@ const Dashboard = () => {
                         </Card>
                     </div>
                     <div>
-                        <Card width="90%">
+                        <Card width="100%" height="80px">
                             <InlineTitle>
                                 <h2>Extrato da Conta</h2>
                             </InlineTitle>
@@ -97,17 +94,19 @@ const Dashboard = () => {
                                 <StatementContainer>
                                     { 
                                         statements.map(statement => {
-                                            <StatementItemContainer>
-                                                <p>Oi</p>
+                                            return <StatementItemContainer>
                                                 <StatementItemImage typePayment={statement.typePayment}></StatementItemImage>
                                                 <StatementItemInfo>
-                                                    <p>{ statement.value.toLocaleString("pt-BR", {
+                                                    <p style={{ color: colors.PRIMARY, fontWeight: "bold" }}>{ statement.value.toLocaleString("pt-BR", {
                                                         style: 'currency',
                                                         currency: 'BRL'
                                                     })} </p>
                                                     <p>
                                                         { statement.typePayment === "pay" ? "Pago a" : "Recebido de" }
-                                                        <strong>{ statement.user.firstName } { statement.user.lastName }</strong>
+                                                        <strong> { statement.user.firstName } { statement.user.lastName }</strong>
+                                                    </p>
+                                                    <p style={{ color: colors.PRIMARY, fontWeight: "bold" }}>
+                                                        { format(statement.updatedAt, 'dd/MM/yyyy HH:mm')}
                                                     </p>
                                                 </StatementItemInfo>
                                             </StatementItemContainer>
@@ -125,5 +124,6 @@ const Dashboard = () => {
 }
 
 // toLocaleString: formatação
+// Date-fns: lib para formatação de data
 
 export default Dashboard;

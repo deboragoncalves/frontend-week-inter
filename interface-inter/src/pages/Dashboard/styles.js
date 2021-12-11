@@ -31,6 +31,12 @@ export const BodyContainer = styled.main`
 export const InlineTitle = styled.div`
     display: flex;
     width: 100%;
+
+    h2 {
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+    }
 `
 
 export const InlineContainer = styled.div`
@@ -46,6 +52,16 @@ export const InlineContainer = styled.div`
     button {
         flex: 1;
     }
+
+    h3 {
+        font-size: 35px;
+        margin: -20px 0 0 0;
+        padding: 0;
+    }
+
+    input {
+        width: 250px;
+    }
 `
 
 export const StatementContainer = styled.div`
@@ -59,27 +75,31 @@ export const StatementContainer = styled.div`
 
 export const StatementItemContainer = styled.div`
     display: flex;
-    width: 100%;
+    width: 65%;
 `
 
 export const StatementItemInfo = styled.div`
+
     p {
+        margin-top: 5px;
         margin-bottom: 2px;
+        width: 200px;
+        height: auto;
+        text-transform: uppercase;
+        text-align: start;
+        font-size: 13px;
     }
 `
 
 export const StatementItemImage = styled.div`
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 50px;
     margin-right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: ${theme.colors.background};
     border-radius: 10px;
     margin-bottom: 20px;
     background-color: ${(props => props.typePayment === 'pay' ? theme.colors.red : theme.colors.green )};
 `;
 
-// Recebe propriedade tipo pagamento
+// StatementItemImage é uma div que recebe propriedade tipo pagamento
 // If ternário - background dinâmico de acordo com tipo do pagamento

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "date-fns": "^2.27.0",
+    "format": "^0.2.2"
+  }
+}

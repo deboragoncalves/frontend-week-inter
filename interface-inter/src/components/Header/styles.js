@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import theme from "../../styles/theme";
 
-export const HeaderContainer = styled.head`
+export const HeaderContainer = styled.main`
     width: 100%;
     height: 90px;
     background-color: ${theme.colors.background};
