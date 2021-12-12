@@ -37,7 +37,7 @@ const Register = () => {
                     <ButtonContainer>
                         <button type="button" onClick={navigateToDashboard}>Entrar</button>
                     </ButtonContainer>
-                    <p>Já tem uma conta? <Link to="/"> Entre já!</Link></p>
+                    <p style={{ fontSize: "1rem" }}>Já tem uma conta? <Link to="/"> Entre já!</Link></p>
                 </Card>
             </LoginContainer>
         </>

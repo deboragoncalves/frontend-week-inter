@@ -22,4 +22,8 @@ export const ButtonContainer = styled.div`
     &:disabled {
         opacity: 0.4;
     }
+
+    button {
+        font-size: 14px;
+    }
 `;

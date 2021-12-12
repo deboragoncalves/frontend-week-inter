@@ -15,11 +15,17 @@ export const InputContainer = styled.div`
     z-index: 5000;
 
     input {
-        font-size: 0.75rem;
+        font-size: 1rem;
         font-weight: 400;
         background: transparent;
         border: 0;
         width: 100%;
         margin: 0 20px;
     }
+
+    input:focus {
+        box-shadow: 0 0 0 0;
+        outline: 0;
+    }
 `;
+

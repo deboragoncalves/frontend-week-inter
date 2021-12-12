@@ -28,7 +28,7 @@ const Login = () => {
                     <ButtonContainer>
                         <button type="button" onClick={navigateToDashboard}>Entrar</button>
                     </ButtonContainer>
-                    <p>Ainda não é cadastrado? <Link to="/register"> Cadastre-se já!</Link></p>
+                    <p style={{ fontSize: "1rem" }}>Ainda não é cadastrado? <Link to="/register"> Cadastre-se já!</Link></p>
                 </Card>
             </LoginContainer>
         </>
@@ -38,7 +38,7 @@ const Login = () => {
 /* Navigate: método que recebe como parâmetro a rota (string)
 Link/Navigate: navega para o componente sem recarregar a página. Link tem como atributo to, que recebe
 como parâmetro a rota (string)
-TODO: Melhorar layout input
+
 TODO: validações input onClick
 */
 
